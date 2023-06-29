@@ -31,6 +31,6 @@ const sampleCDRs = (date) => [
     "actionCode": "CU",
   },
 ];
-export const getSampleCdr = (date) => {
+exports.getSampleCdr = (date) => {
   return sampleCDRs(date)[getRandomInt(sampleCDRs.length)];
 };
