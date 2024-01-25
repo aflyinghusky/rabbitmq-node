@@ -12,15 +12,15 @@ const sampleCDRs = (date) => [
     "createdAt": date,
     "actionCode": "NOANSWER"
   },
-  {
-    "score": 1,
-    "tags": [],
-    "duration": 0,
-    "state": "USER_HANGUP",
-    "caller": "842367109722",
-    "createdAt": date,
-    "actionCode": "CU"
-  },
+  // {
+  //   "score": 1,
+  //   "tags": [],
+  //   "duration": 0,
+  //   "state": "USER_HANGUP",
+  //   "caller": "842367109722",
+  //   "createdAt": date,
+  //   "actionCode": "CU"
+  // },
   {
     "score": 1,
     "tags": [],
@@ -31,6 +31,10 @@ const sampleCDRs = (date) => [
     "actionCode": "CU",
   },
 ];
-export const getSampleCdr = (date) => {
+const getSampleCdr = (date) => {
   return sampleCDRs(date)[getRandomInt(sampleCDRs.length)];
 };
+
+module.exports = {
+  getSampleCdr,
+}
